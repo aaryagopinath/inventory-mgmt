@@ -1,7 +1,6 @@
 from sqlalchemy.orm import Session
 from datetime import date
 from . import models, schemas
-from app.utils import notify_out_of_stock
 
 def get_items(db: Session):
     return db.query(models.Item).all()
